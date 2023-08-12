@@ -1,0 +1,168 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form validation in HTML & CSS </title>
+  <link rel="stylesheet" href="../static/css/style_login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Login Form</header>
+    <form action="/" method="post">
+      <div class="field email">
+        <div class="input-area">
+          <input type="text" placeholder="Email Address" name="email">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email can't be blank</div>
+      </div>
+      <div class="field password">
+        <div class="input-area"> 
+          <input type="password" placeholder="Password" name="password">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password can't be blank</div>
+      </div>
+      <div class="pass-txt"><a href="#">Forgot password?</a></div>
+      <input type="submit" value="Login">
+    </form>
+    <div class="sign-txt">Not yet member? <a href="#">Signup now</a></div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="    viewport" content="width=device-width, initial-scale=1.0">
+     <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+      </script> -->
+     
+    <!-- <title>Html-Login-System</title>
+
+<style>
+.formContainer{
+text-align: center;
+    }
+</style>
+</head>
+<body>
+
+    <div class="formContainer">
+    <h1>Enter your Credentials</h1>
+    <hr>
+    <input type="email" placeholder="email here" id="email"><br><br>
+    <input type="password" placeholder="password here" id="password"><br><br>
+    <button id="signUp">SignUp</button>
+    <button onclick="signIn()" id="signIn">SignIn</button>
+    <button onclick="signOut()" id="signOut">SignOut</button>
+</div>
+
+
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+  import {getAuth,createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBqbJxj3dubD-n8rIr8oSJrNgsYinWGQdk",
+    authDomain: "softwareengineering-a35b6.firebaseapp.com",
+    projectId: "softwareengineering-a35b6",
+    storageBucket: "softwareengineering-a35b6.appspot.com",
+    messagingSenderId: "449785318210",
+    appId: "1:449785318210:web:f3b05bddcd80f97e6456db",
+    measurementId: "G-YJSFGPZ7PZ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const Auth = getAuth();
+  
+  const signUp = () =>{
+
+    var email = document.getElementById("email");
+  var password = document.getElementById("password");
+    console.log("Not working");
+  const promise = Auth.createUserWithEmailAndPassword(Auth,email.value,password.value);
+  //
+  promise.catch(e=>alert(e.message));
+  console.log(promise)
+  alert("SignUp Successfully");
+  }
+  document.getElementById('signUp').addEventListener('click',signUp());
+// function signUp(){
+  
+//   var email = document.getElementById("email");
+//   var password = document.getElementById("password");
+
+//   const promise = Auth.createUserWithEmailAndPassword(email.value,password.value);
+//   //
+//   promise.catch(e=>alert(e.message));
+//   console.log(promise)
+//   alert("SignUp Successfully");
+// }
+
+
+
+function  signIn(){
+var email = document.getElementById("email");
+var password  = document.getElementById("password");
+const promise = Auth.signInWithEmailAndPassword(email.value,password.value);
+if(promise){
+window.location.replace("./index.html")
+}  
+}
+
+
+
+
+function signOut(){
+auth.signOut();
+alert("SignOut Successfully from System");
+}
+
+
+
+Auth.onAuthStateChanged((user)=>{
+if(user){
+var email = user.email;
+alert("Active user "+email);
+
+}else{
+alert("No Active user Found")
+}
+})
+
+</script>
+
+
+    
+</body> 
+
+</html>  -->
